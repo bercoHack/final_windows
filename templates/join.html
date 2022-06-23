@@ -38,6 +38,7 @@
         var videoMuted = "{{mute_video}}" == "1";
     </script>
 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.4.8/socket.io.min.js"></script>
 
 
     <meta charset="UTF-8">
@@ -50,7 +51,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
         
-            var socket = io.connect('https://');
+            var socket = io.connect('https://final-windows.herokuapp.com');
         
             socket.on('connect', function() {
                 socket.send('User has connected!');
