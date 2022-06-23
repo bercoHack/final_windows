@@ -34,7 +34,6 @@ def goto():
     video = 0
     if request.form.get('video'):
         video = 1  
-    app.logger.info("%s//////////////", password) 
     if teachers[name] == password:
         display_name = name
         mute_audio =  audio
@@ -90,6 +89,8 @@ def on_join_room(data):
     join_room(room_id)
     rooms_sid[sid] = room_id
     names_sid[sid] = display_name
+
+    app.logger.info('im herreeeeeeeeeeeeeeeeeeeeee')
 
     # broadcast to others in the room
     print("[{}] New member joined: {}<{}>".format(room_id, display_name, sid))
