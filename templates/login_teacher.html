@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- icon -->
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body style="background-color: plum">
+    <h1 style="margin-top: 10%; margin-left: 22%;" >welcome to our new group learning platfom</h1>
+    <form style=" margin-left: 40%;" id="form1" action="/goto_join" method="post">
+        <h3>enter your name:</h3><input type="text" id="name" name="name"><br>
+        <h3>enter room number from teacher:</h3><input type="text" id="room" name="room"><br>
+        <h3>enter password</h3><input type="password" id="pass" name="pass"><br>
+        <h3>mute your audio?</h3><input type="checkbox" value="1" name="audio" id="audio"><br>
+        <h3>mute your video?</h3><input type="checkbox" value="1" name="video" id="video"><br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
+
+
