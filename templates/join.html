@@ -51,7 +51,7 @@
     <script type="text/javascript">
         $(document).ready(function() {
         
-            var socket = io.connect('https://final-windows.herokuapp.com');
+            var socket = io.connect('https://final-windows.herokuapp.com/');
         
             socket.on('connect', function() {
                 socket.send('User has connected!');
