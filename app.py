@@ -84,13 +84,13 @@ def on_join_room(data):
     sid = request.sid
     room_id = data["room_id"]
     display_name = session[room_id]["name"]
+    app.logger.info('im herreeeeeeeeeeeeeeeeeeeeee')
 
     # register sid to the room
     join_room(room_id)
     rooms_sid[sid] = room_id
     names_sid[sid] = display_name
 
-    app.logger.info('im herreeeeeeeeeeeeeeeeeeeeee')
 
     # broadcast to others in the room
     print("[{}] New member joined: {}<{}>".format(room_id, display_name, sid))
