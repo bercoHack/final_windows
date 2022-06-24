@@ -1,13 +1,11 @@
 from ast import Not
 from flask import Flask, render_template, request, session, redirect, url_for
 from flask_socketio import SocketIO, emit, join_room, send
-from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
 app.config['SECRET_KEY'] = "wubba lubba dub dub"
 
-socketio = SocketIO(app)
+socketio = SocketIO(app,  cors_allowed_origins="*")
 
 users_in_room = {}
 rooms_sid = {}
