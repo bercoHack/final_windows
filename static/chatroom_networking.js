@@ -3,7 +3,7 @@ var _peer_list = {};
 
 // socketio 
 var protocol = window.location.protocol;
-var socket = io(protocol + '//' + document.domain + ':' + location.port, {autoConnect: true});
+var socket = io(protocol + '//' + document.domain, {autoConnect: true});
 document.addEventListener("DOMContentLoaded", (event)=>{
     startCamera();
 });
